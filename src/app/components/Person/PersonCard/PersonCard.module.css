@@ -1,0 +1,31 @@
+.animatedButton {
+    position: relative;
+    padding: 2px;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+}
+  
+.animatedButton::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    background: #0074D9;
+    z-index: -1;
+    transition: width 0.8s ease;
+}
+  
+.animatedButton:hover::before {
+    width: 100%;
+}
+
+.animatedButton:hover {
+    color: blcak;
+    background-clip: text; /* Apply gradient only to text */
+    -webkit-background-clip: text; /* For Safari */
+}
